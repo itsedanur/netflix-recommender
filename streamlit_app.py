@@ -78,12 +78,12 @@ def get_recommendations(title, cosine_sim=cosine_sim, df=df):
     return df.iloc[movie_indices]
 
 
-st.title("🎬 Netflix Film Öneri Sistemi")
+st.title(" Netflix Film Öneri Sistemi")
 st.markdown("Bu sistem, seçtiğiniz filme benzer içerikleri önerir. Poster, açıklama, yorum, beğeni ve favori özellikleri içerir.")
 
 
 with st.sidebar:
-    st.header("🔍 Filtreleme")
+    st.header(" Filtreleme")
     selected_type = st.selectbox("Tür", ["Hepsi"] + sorted(df['type'].dropna().unique()))
     selected_country = st.selectbox("Ülke", ["Hepsi"] + sorted(df['country'].dropna().unique()))
     selected_year = st.selectbox("Yıl", ["Hepsi"] + sorted(df['release_year'].dropna().unique(), reverse=True))
