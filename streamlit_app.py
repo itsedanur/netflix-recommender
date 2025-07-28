@@ -116,7 +116,7 @@ if st.button(" Önerileri Göster"):
             st.caption(row['description'])
 
           
-            if st.button(f"❤ Favorilere Ekle: {row['title']}", key="fav_" + row['title']):
+            if st.button(f" Favorilere Ekle: {row['title']}", key="fav_" + row['title']):
                 if row['title'] not in st.session_state['favorites']:
                     st.session_state['favorites'].append(row['title'])
 
